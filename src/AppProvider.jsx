@@ -1,28 +1,23 @@
 import { createContext, useContext, useState } from "react";
+import { LIST, GRID } from "./constants/viewModes"
 
 const AppContext = createContext();
 
 export const AppProvider = ({children}) => {
-    const screen = {
-        mobile: 500,
-        tablet: 768,
-        desktop: 1100,
-    };
-
-    const [selectedOption, setSelectedOption] = useState("List");
+    const [selectedOption, setSelectedOption] = useState(LIST);
 
     const handleOptionSelect = (option) => {
         setSelectedOption(option);
       };
 
     const dropdownData = {
-        options: ['List', 'Grid'],
+        options: [LIST, GRID],
         selectedOption: selectedOption,
         onSelect: handleOptionSelect,
     }
 
     return(
-        <AppContext.Provider value={{screen, dropdownData }}>
+        <AppContext.Provider value={{ dropdownData }}>
             {children}
         </AppContext.Provider>
     );

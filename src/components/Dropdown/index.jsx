@@ -27,11 +27,13 @@ const Dropdown = ({options, onSelect, defaultOption}) => {
             </ViewPickerHeader>
             {isDropdownOpen && (
                 <ViewPickerList role='list'>
-                {options.map((option, index) => (
-                    <li key={index} onClick={() => handleClick(option)}>
-                    {option}
-                    </li>
-                ))}
+                {
+                    options.map((option, index) => (
+                        <li key={index} onClick={() => handleClick(option)}>
+                            {option}
+                        </li>
+                    ))
+                }
                 </ViewPickerList>
             )}
         </ViewPicker>

@@ -17,6 +17,7 @@ const ViewPickerHeader = styled.div`
     align-items: center;
 
     span{
+        text-transform: capitalize;
         color: #333;
         width: 122.366px;
         text-align: center;
@@ -44,6 +45,7 @@ const ViewPickerList = styled.ul`
     z-index: 1;
 
     li{
+        text-transform: capitalize;
         display: flex;
         justify-content: center;
         align-items: center;

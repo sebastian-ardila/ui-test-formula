@@ -3,6 +3,7 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0 2.5rem 0;
 `;
 const Title = styled.h1`
     margin: 0;
