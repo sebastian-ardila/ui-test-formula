@@ -1,0 +1,2 @@
+export const getPositiveVotes = (positives, negatives) => (positives / (positives + negatives)) * 100;
+export const getNegativeVotes = (positives, negatives) => (negatives / (positives + negatives)) * 100;
