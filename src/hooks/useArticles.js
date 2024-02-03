@@ -2,12 +2,10 @@ import rulings from '../assets/data.json';
 import { useEffect, useState } from 'react';
 
 const useArticles = () =>{
-    const [articles, setArticles] = useState(rulings.data);
-
-    useEffect(() => {
+    const [articles, setArticles] = useState(() => {
         const data = window.localStorage.getItem('ARTICLES');
-        setArticles(JSON.parse(data));
-    }, []);
+        return data ? JSON.parse(data) : rulings.data;
+    });
 
     useEffect(() => {
         window.localStorage.setItem('ARTICLES', JSON.stringify(articles));

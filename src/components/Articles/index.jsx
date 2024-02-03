@@ -14,10 +14,10 @@ const Articles = () => {
     return(
         <Container className={getClassFromType(type, isMobile(currentScreenWidth))}>
             {
-                articles.map((article)=>(
+                articles.map((article, index)=>(
                     <Card 
-                        key={crypto.randomUUID()} 
-                        article={article} 
+                        key={index} 
+                        article={article}
                         setArticles={setArticles}
                         variant={getVariant(currentScreenWidth, type)}
                     />

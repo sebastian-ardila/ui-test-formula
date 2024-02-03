@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     border: 1px solid #FFF;
-    background: rgba(0, 0, 0, 0.60);
-    cursor: pointer;
+    background: ${(props) => props.$enabled ? "rgba(48, 48, 48, 0.60)" : "rgba(0, 0, 0, 0.60)"};
+    cursor: ${(props) => props.$enabled ? "pointer": "not-allowed"};
+    pointer-events: ${(props) => props.$enabled ? "auto": "none"};
 
     span{
         color: #FFF;
@@ -30,6 +31,7 @@ export const Description = styled.span`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    white-space: nowrap;
 `;
 
 
@@ -57,6 +59,16 @@ export const Container = styled.div`
 
         }
 
+        .vote-again{
+            width: 115px;
+            height: 38px;
+            flex-shrink: 0;
+
+            .span{
+                font-size: 15px;
+            }
+        }
+
     }
 
     &.votes-mobile-list{
@@ -66,6 +78,16 @@ export const Container = styled.div`
 
         .vote-now-button{
             width: 107px;
+            height: 38px;
+            flex-shrink: 0;
+
+            .span{
+                font-size: 15px;
+            }
+        }
+
+        .vote-again{
+            width: 115px;
             height: 38px;
             flex-shrink: 0;
 
@@ -87,6 +109,16 @@ export const Container = styled.div`
 
             .span{
                 font-size: 18px;
+            }
+        }
+
+        .vote-again{
+            width: 149px;
+            height: 45px;
+            flex-shrink: 0;
+
+            .span{
+                font-size: 15px;
             }
         }
     }
