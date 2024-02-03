@@ -17,8 +17,11 @@ export const Container = styled.button`
         height: 30px;
 
         .thumb{
-            width: 15px;
-            height: 15px;
+            min-width: 15px;
+            min-height: 15px;
+            max-width: 15px;
+            max-height: 15px;
+            z-index: 1;
         }
     }
 
@@ -27,8 +30,11 @@ export const Container = styled.button`
         height: 30px;
 
         .thumb{
-            width: 15px;
-            height: 15px;
+            min-width: 15px;
+            min-height: 15px;
+            max-width: 15px;
+            max-height: 15px;
+            z-index: 1;
         }
     }
 
@@ -37,8 +43,11 @@ export const Container = styled.button`
         height: 45px;
 
         .thumb{
-            width: 22.5px;
-            height: 22.5px;
+            min-width: 22.5px;
+            min-height: 22.5px;
+            max-width: 22.5px;
+            max-height: 22.5px;
+            z-index: 1;
         }
     }
 `;
